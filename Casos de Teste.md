@@ -55,16 +55,16 @@ Sistema NÃO deve criar o cadastro de um novo usuário com dados inválidos.
 ### 🧾 Dados de Entrada:
 | Campo            | Valor de Teste        |
 |------------------|------------------------|
-| Nome             | João                   |
+| Nome             | João Silva                  |
 | Email            | joao@email.com         |
 | Senha            | senha123               |
 | Confirmar Senha  | senha123               |
 
 ### 💡 Resultado Esperado:
-Usuário não deve ser cadastrado com dados inválidos e se manter na mesma página de cadastro.
+Usuário não deve ser cadastrado com dados inválidos e se manter na mesma página de cadastro, e notificar que a senha não é válida.
 
 ### 📌 Resultado Obtido:
-Usuário não foi cadastrado e se manteve na página de cadastro.
+Usuário não foi cadastrado,se manteve na mesma página, e notificou que a senha é inválida (deve ser alfanumérica).
 
 ### ✅ Status do Teste:
 - [x] Aprovado
@@ -368,5 +368,408 @@ Usuário não conseguiu acessar ao site, causando quebra de estilos. Não mostra
 ### ✅ Status do Teste:
 - [ ] Aprovado
 - [x] Reprovado
+
+---
+
+## 🧪 ID: 013
+
+### ✅ Nome do Teste:
+Alterar email de usuário.
+
+### 🎯 Descrição:
+Usuário deve entrar nas configurações de perfil e alterar suas informações.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar as configurações da conta.
+2. Clicar na opção "Editar informações".
+3. Selecionar o campo de "E-mail".
+4. Clicar em "Confirmar alterações".
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Email            | pedro@email.com         |
+
+### 💡 Resultado Esperado:
+Usuário continua na mesma página e recebe um e-mail de confirmação da alteração de e-mail.
+
+### 📌 Resultado Obtido:
+Usuário não foi redirecionado e recebeu um e-mail de confirmação.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 014
+
+### ✅ Nome do Teste:
+Alterar senha de usuário.
+
+### 🎯 Descrição:
+Usuário deve entrar nas configurações de perfil e alterar suas informações.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar as configurações da conta.
+2. Clicar na opção "Editar informações".
+3. Selecionar o campo de "Senha".
+4. Clicar em "Confirmar alterações".
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Senha            | SenhaNova123         |
+
+### 💡 Resultado Esperado:
+Usuário continua na mesma página e recebe um e-mail de confirmação da alteração de senha.
+
+### 📌 Resultado Obtido:
+Usuário não foi redirecionado e recebeu um e-mail de confirmação.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 015
+
+### ✅ Nome do Teste:
+Deletar conta de usuário.
+
+### 🎯 Descrição:
+Usuário deve entrar nas configurações de perfil e excluir sua própria conta.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar as configurações da conta.
+2. Clicar na opção "Excluir conta".
+3. Confirmar opção.
+
+### 💡 Resultado Esperado:
+Usuário deve ser redirecionado pra página de cadastro do site, receber e-mail de confirmação da exclusão da conta.
+
+### 📌 Resultado Obtido:
+Usuário foi redirecionado pra página de cadastro e recebeu um e-mail de confirmação.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 016
+
+### ✅ Nome do Teste:
+Cadastro de um produto novo.
+
+### 🎯 Descrição:
+Administrador deve cadastrar novos produtos no sistema.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "Cadastrar novo produto".
+3. Inserir dados válidos.
+4. Confirmar cadastro.
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Nome             | AirMax                   |
+| Preço            | 400.00         |
+| Categoria            | Tênis               |
+| Marca  | Nike               |
+| Foto  | img1.jpeg               |
+
+### 💡 Resultado Esperado:
+Usuário não deve ser redirecionado, deve limpar os campos e aparecer notificação de sucesso.
+
+### 📌 Resultado Obtido:
+Usuário não foi redirecionado, os campos foram apagados e notificou mensagem de sucesso.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 017
+
+### ✅ Nome do Teste:
+Editar informações do produto.
+
+### 🎯 Descrição:
+Administrador deve editar informações de produtos no sistema.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "editar produto".
+3. Clicar no produto.
+4. Inserir dados válidos.
+5. Confirmar edição.
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Nome             | AirMax                   |
+| Preço            | 500.00         |
+| Categoria            | Tênis               |
+| Marca  | Nike               |
+| Foto  | img1.jpeg               |
+
+### 💡 Resultado Esperado:
+Usuário deve ser redirecionado pra página "administrador" e aparecer notificação de sucesso.
+
+### 📌 Resultado Obtido:
+Usuário foi redirecionado e notificou mensagem de sucesso.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 018
+
+### ✅ Nome do Teste:
+Excluir do produto.
+
+### 🎯 Descrição:
+Administrador deve excluir produtos no sistema.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "excluir produto".
+3. Clicar no produto.
+4. Confirmar exclusão.
+
+### 💡 Resultado Esperado:
+Usuário deve ser redirecionado pra página "administrador" e aparecer notificação de sucesso.
+
+### 📌 Resultado Obtido:
+Usuário foi redirecionado e notificou mensagem de sucesso.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 019
+
+### ✅ Nome do Teste:
+Login inválido do usuário no sistema.
+
+### 🎯 Descrição:
+Usuário não deve entrar no sistema utilizando e-mail incorreto.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar na tela de login do sistema.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a tela de login.
+2. Preencher os campos obrigatórios com dados inválidos.
+3. Clicar no botão de "Login".
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Email            | joao123@email.com         |
+| Senha            | senha123               |
+
+### 💡 Resultado Esperado:
+Usuário não deve entrar no sistema, deve ser notificado que o e-mail ou a senha estão incorretos.
+
+### 📌 Resultado Obtido:
+Usuário não entrou no sistema e foi notificado que e-mail ou senha estão incorretos.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 020
+
+### ✅ Nome do Teste:
+Login inválido do usuário no sistema.
+
+### 🎯 Descrição:
+Usuário não deve entrar no sistema utilizando senha incorreta.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar na tela de login do sistema.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a tela de login.
+2. Preencher os campos obrigatórios com dados inválidos.
+3. Clicar no botão de "Login".
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Email            | joao@email.com         |
+| Senha            | 12345678               |
+
+### 💡 Resultado Esperado:
+Usuário não deve entrar no sistema, deve ser notificado que o e-mail ou a senha estão incorretos.
+
+### 📌 Resultado Obtido:
+Usuário não entrou no sistema e foi notificado que e-mail ou senha estão incorretos.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 021
+
+### ✅ Nome do Teste:
+Cadastro de produto com dados inválidos.
+
+### 🎯 Descrição:
+Teste de cadastro de produto com dado inválido.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "Criar produto".
+3. Inserir dados inválidos.
+4. Confirmar cadastro.
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Nome             | AirMax                   |
+| Preço            | -500.00         |
+| Categoria            | Tênis               |
+| Marca  | Nike               |
+| Foto  | img1.jpeg               |
+
+### 💡 Resultado Esperado:
+Administrador não deve criar o produto, deve ser notificado que o valor inserido é negativo.
+
+### 📌 Resultado Obtido:
+Produto não foi cadastrado, foi notificado que o valor inserido é negativo.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 022
+
+### ✅ Nome do Teste:
+Alteração de produto com dados inválidos.
+
+### 🎯 Descrição:
+Teste de cadastro de produto com dado inválido.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "Editar produto".
+2. Clicar no produto.
+3. Inserir dados inválidos.
+4. Confirmar alteração.
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Nome             | AirMax                   |
+| Preço            | -500.00         |
+| Categoria            | Tênis               |
+| Marca  | Nike               |
+| Foto  | img1.jpeg               |
+
+### 💡 Resultado Esperado:
+Administrador não deve editar o produto, deve ser notificado que o valor inserido é negativo.
+
+### 📌 Resultado Obtido:
+Produto não foi alterado, foi notificado que o valor inserido é negativo.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
+
+---
+
+## 🧪 ID: 023
+
+### ✅ Nome do Teste:
+Cadastro de produto com outros dados inválidos.
+
+### 🎯 Descrição:
+Teste de cadastro de produto com dado inválido.
+
+### 🧰 Pré-requisitos:
+- Usuário deve estar logado no sistema.
+- Usuário deve estar na página de administrador.
+- Banco de dados deve estar acessível.
+
+### 📝 Procedimentos (Passos para execução do teste):
+1. Acessar a página "administrador".
+2. Clicar na opção "Editar produto".
+2. Clicar no produto.
+3. Inserir dados inválidos.
+4. Confirmar alteração.
+
+### 🧾 Dados de Entrada:
+| Campo            | Valor de Teste        |
+|------------------|------------------------|
+| Nome             | AirMax                   |
+| Preço            | 500.00         |
+| Categoria            | Tênis               |
+| Marca  | Nike               |
+| Foto  | img1.txt              |
+
+### 💡 Resultado Esperado:
+Administrador não deve cadastrar o produto, deve ser notificado que a foto inserida é inválida.
+
+### 📌 Resultado Obtido:
+Produto não foi cadastrado, notificou que a foto inserida é inválida.
+
+### ✅ Status do Teste:
+- [x] Aprovado
+- [ ] Reprovado
 
 ---
