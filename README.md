@@ -20,9 +20,8 @@ Este repositório serve como suporte prático ao aprendizado e aplicação dos c
 
 ## 👨‍💻 Autores
 
-[Vitor Reis](https://github.com/ReisVC)
-
-[Henrique Michel](https://github.com/FriendlyDemon)
+- [Vitor Reis](https://github.com/ReisVC)
+- [Henrique Michel](https://github.com/FriendlyDemon)
 
 ---
 
